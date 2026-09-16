@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Estado e Contador Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <header class="app-header">
+            <h1>Painel Interativo</h1>
+            <button id="btn-theme-toggle" aria-label="Alternar Tema">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </header>
+
+        <section class="counter-section">
+            <div class="display-container">
+                <span id="counter-display">0</span>
+                <p id="status-message" class="status-message"></p>
+            </div>
+
+            <fieldset class="controls-grid">
+                <legend>Controles</legend>
+                <button id="btn-decrement" class="btn btn-danger">-5</button>
+                <button id="btn-step-down" class="btn btn-warning">-1</button>
+                <button id="btn-reset" class="btn btn-secondary">Zerar</button>
+                <button id="btn-step-up" class="btn btn-success">+1</button>
+                <button id="btn-increment" class="btn btn-primary">+5</button>
+            </fieldset>
+        </section>
+
+        <section class="history-section">
+            <h2>Histórico de Atividades</h2>
+            <ul id="history-list" class="history-list">
+                <!-- Itens injetados via JavaScript -->
+            </ul>
+            <button id="btn-clear-history" class="btn btn-outline">Limpar Histórico</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
