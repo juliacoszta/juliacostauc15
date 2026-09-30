@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Cadastro - Mimosas Food
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body class="pagina-login">
+
+    <div class="login-caixa">
+
+        <a
+            href="login.html"
+            class="voltar-login"
+        >
+            ← Voltar
+        </a>
+
+        <div class="login-icone">
+            👤
+        </div>
+
+        <h1>
+            Mimosas Food
+        </h1>
+
+        <p class="login-subtitulo">
+            Crie sua conta
+        </p>
+
+        <form id="formCadastro">
+
+            <div class="campo-login">
+
+                <span>
+                    👤
+                </span>
+
+                <input
+                    type="text"
+                    id="nomeCadastro"
+                    placeholder="Seu nome"
+                    required
+                >
+
+            </div>
+
+            <div class="campo-login">
+
+                <span>
+                    ✉️
+                </span>
+
+                <input
+                    type="email"
+                    id="emailCadastro"
+                    placeholder="E-mail"
+                    required
+                >
+
+            </div>
+
+            <div class="campo-login">
+
+                <span>
+                    🔒
+                </span>
+
+                <input
+                    type="password"
+                    id="senhaCadastro"
+                    placeholder="Crie uma senha"
+                    required
+                >
+
+            </div>
+
+            <div class="campo-login">
+
+                <span>
+                    🔐
+                </span>
+
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    placeholder="Confirme sua senha"
+                    required
+                >
+
+            </div>
+
+            <p
+                id="erroCadastro"
+                class="erro"
+            ></p>
+
+            <button
+                type="submit"
+                class="botao-entrar"
+            >
+                CRIAR CONTA
+            </button>
+
+        </form>
+
+        <div class="linha-login">
+            <span>ou</span>
+        </div>
+
+        <a
+            href="login.html"
+            class="botao-cadastro"
+        >
+            JÁ TENHO UMA CONTA
+        </a>
+
+    </div>
+
+    <script src="java.js"></script>
+
+</body>
+</html>

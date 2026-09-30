@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimosas Food</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Mimosas Food</h1>
+            <p>Comida gostosa do seu jeito!</p>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="login.html">Entrar</a>
+
+            <button onclick="abrirCarrinho()">
+                🛒 Carrinho
+                <span id="contadorCarrinho">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="inicio" id="inicio">
+
+            <div class="inicio-texto">
+
+                <h2>
+                    Bem-vindo à Mimosas Food!
+                </h2>
+
+                <p>
+                    Hambúrgueres, pizzas, porções, bebidas e
+                    sobremesas para deixar seu dia muito mais gostoso.
+                </p>
+
+                <a href="#cardapio" class="botao">
+                    Ver cardápio
+                </a>
+
+            </div>
+
+            <div class="inicio-imagem">
+                🍔
+            </div>
+
+        </section>
+
+        <section class="cardapio" id="cardapio">
+
+            <div class="titulo">
+
+                <h2>Nosso Cardápio</h2>
+
+                <p>
+                    Escolha o que você quer comer hoje!
+                </p>
+
+            </div>
+
+            <div class="busca">
+
+                <input
+                    type="text"
+                    id="campoBusca"
+                    placeholder="Pesquisar produto..."
+                    oninput="pesquisarProdutos()"
+                >
+
+            </div>
+
+            <div class="categorias">
+
+                <button
+                    class="categoria ativa"
+                    onclick="filtrarCategoria('todos', this)"
+                >
+                    Todos
+                </button>
+
+                <button
+                    class="categoria"
+                    onclick="filtrarCategoria('hamburguer', this)"
+                >
+                    🍔 Hambúrguer
+                </button>
+
+                <button
+                    class="categoria"
+                    onclick="filtrarCategoria('pizza', this)"
+                >
+                    🍕 Pizza
+                </button>
+
+                <button
+                    class="categoria"
+                    onclick="filtrarCategoria('porcao', this)"
+                >
+                    🍟 Porções
+                </button>
+
+                <button
+                    class="categoria"
+                    onclick="filtrarCategoria('bebida', this)"
+                >
+                    🥤 Bebidas
+                </button>
+
+                <button
+                    class="categoria"
+                    onclick="filtrarCategoria('sobremesa', this)"
+                >
+                    🍫 Sobremesas
+                </button>
+
+            </div>
+
+            <div
+                id="listaProdutos"
+                class="produtos"
+            ></div>
+
+        </section>
+
+        <section class="sobre" id="sobre">
+
+            <div>
+
+                <h2>
+                    Sobre a Mimosas Food
+                </h2>
+
+                <p>
+                    A Mimosas Food foi criada para oferecer
+                    comidas gostosas, preços acessíveis e
+                    um atendimento simples e rápido.
+                </p>
+
+                <p>
+                    Escolha seus produtos, coloque no carrinho
+                    e faça seu pedido.
+                </p>
+
+            </div>
+
+            <div class="sobre-emoji">
+                🍕
+            </div>
+
+        </section>
+
+    </main>
+
+    <div
+        id="fundoCarrinho"
+        class="fundo"
+        onclick="fecharCarrinho()"
+    ></div>
+
+    <aside
+        id="carrinho"
+        class="carrinho"
+    >
+
+        <div class="carrinho-topo">
+
+            <h2>
+                Meu Carrinho
+            </h2>
+
+            <button onclick="fecharCarrinho()">
+                ✕
+            </button>
+
+        </div>
+
+        <div id="itensCarrinho"></div>
+
+        <div class="resumo">
+
+            <div>
+                <span>Subtotal</span>
+                <strong id="subtotal">
+                    R$ 0,00
+                </strong>
+            </div>
+
+            <div>
+                <span>Entrega</span>
+                <strong id="entrega">
+                    R$ 0,00
+                </strong>
+            </div>
+
+            <div>
+                <span>Desconto</span>
+                <strong id="desconto">
+                    - R$ 0,00
+                </strong>
+            </div>
+
+            <div class="total">
+                <span>Total</span>
+                <strong id="total">
+                    R$ 0,00
+                </strong>
+            </div>
+
+            <div class="cupom">
+
+                <input
+                    type="text"
+                    id="campoCupom"
+                    placeholder="Cupom de desconto"
+                >
+
+                <button onclick="aplicarCupom()">
+                    Aplicar
+                </button>
+
+            </div>
+
+            <button
+                class="finalizar"
+                onclick="abrirCheckout()"
+            >
+                Finalizar pedido
+            </button>
+
+        </div>
+
+    </aside>
+
+    <div
+        id="modalCheckout"
+        class="modal"
+    >
+
+        <div class="modal-caixa">
+
+            <button
+                class="fechar"
+                onclick="fecharCheckout()"
+            >
+                ✕
+            </button>
+
+            <h2>
+                Finalizar pedido
+            </h2>
+
+            <p>
+                Preencha seus dados para continuar.
+            </p>
+
+            <form
+                id="formPedido"
+                onsubmit="finalizarPedido(event)"
+            >
+
+                <label>
+                    Nome
+                </label>
+
+                <input
+                    type="text"
+                    id="nomeCliente"
+                    placeholder="Seu nome"
+                    required
+                >
+
+                <label>
+                    Telefone
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefoneCliente"
+                    placeholder="(00) 00000-0000"
+                    required
+                >
+
+                <label>
+                    Endereço
+                </label>
+
+                <input
+                    type="text"
+                    id="enderecoCliente"
+                    placeholder="Rua, número e bairro"
+                    required
+                >
+
+                <label>
+                    Forma de pagamento
+                </label>
+
+                <select
+                    id="pagamento"
+                    required
+                >
+
+                    <option value="">
+                        Escolha uma opção
+                    </option>
+
+                    <option value="pix">
+                        PIX
+                    </option>
+
+                    <option value="cartao">
+                        Cartão
+                    </option>
+
+                    <option value="dinheiro">
+                        Dinheiro
+                    </option>
+
+                </select>
+
+                <label>
+                    Observação
+                </label>
+
+                <textarea
+                    id="observacao"
+                    placeholder="Alguma observação?"
+                ></textarea>
+
+                <button
+                    type="submit"
+                    class="finalizar"
+                >
+                    Confirmar pedido
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div
+        id="modalSucesso"
+        class="modal"
+    >
+
+        <div class="modal-caixa sucesso">
+
+            <div class="icone-sucesso">
+                ✅
+            </div>
+
+            <h2>
+                Pedido realizado!
+            </h2>
+
+            <p>
+                Obrigado por comprar na Mimosas Food.
+            </p>
+
+            <strong id="numeroPedido">
+                Pedido #0000
+            </strong>
+
+            <button
+                class="finalizar"
+                onclick="fecharSucesso()"
+            >
+                Voltar
+            </button>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>
+            © 2026 Mimosas Food
+        </p>
+
+        <p>
+            Feito com carinho 🍔
+        </p>
+
+    </footer>
+
+    <script src="java.js"></script>
+
+</body>
+</html>
