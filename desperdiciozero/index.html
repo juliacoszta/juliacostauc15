@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Desperdício Zero – projeto sobre o ODS 12 e o desperdício de alimentos em Natal/RN.">
+  <title>Desperdício Zero – Pequenas atitudes, grandes mudanças</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#inicio" class="logo" aria-label="Desperdício Zero – voltar ao início">
+        <span class="logo-icon" aria-hidden="true">🌱</span>
+        <span>Desperdício <strong>Zero</strong></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <span class="sr-only">Abrir menu</span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#problema" class="nav-link">O Problema</a></li>
+        <li><a href="#ods12" class="nav-link">ODS 12</a></li>
+        <li><a href="#calculadora" class="nav-link">Calculadora</a></li>
+        <li><a href="#quiz" class="nav-link">Quiz</a></li>
+        <li><a href="#dicas" class="nav-link">Dicas</a></li>
+        <li><a href="#desafio" class="nav-link">Desafio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <section id="inicio" class="hero" aria-labelledby="titulo-inicio">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <span class="badge">ODS 12 · Consumo e Produção Responsáveis</span>
+          <h1 id="titulo-inicio">Desperdício Zero</h1>
+          <p class="hero-subtitle">Pequenas atitudes, grandes mudanças</p>
+          <blockquote class="hero-quote">
+            “O alimento que você desperdiça pode fazer falta para alguém.”
+          </blockquote>
+          <p class="hero-desc">
+            Um projeto sobre o desperdício de alimentos em <strong>Natal, Rio Grande do Norte</strong> —
+            nas escolas, residências, restaurantes e supermercados — e sobre o que cada pessoa pode fazer para mudar essa realidade.
+          </p>
+          <div class="hero-actions">
+            <a href="#problema" class="btn btn-primary">Conheça o problema →</a>
+            <a href="#desafio" class="btn btn-outline">Aceitar o desafio de 7 dias</a>
+          </div>
+        </div>
+
+        <figure class="hero-figure reveal">
+          <svg viewBox="0 0 400 360" role="img" aria-labelledby="svgHeroTitle svgHeroDesc" class="hero-svg">
+            <title id="svgHeroTitle">Ilustração de cesta com alimentos e planeta</title>
+            <desc id="svgHeroDesc">Um planeta verde ao fundo com uma cesta cheia de frutas e verduras à frente, simbolizando consumo consciente.</desc>
+            <circle cx="200" cy="170" r="150" fill="#d8efd0"/>
+            <circle cx="200" cy="170" r="115" fill="#a8d5a2"/>
+            <path d="M120 120 q30 -30 60 -5 q20 20 50 0 q25 -15 45 15 q-10 35 -50 30 q-35 -5 -55 20 q-30 10 -50 -60z" fill="#6fb36a"/>
+            <path d="M150 220 q20 -15 45 0 q20 15 40 -5 q15 20 -10 35 q-40 15 -75 -30z" fill="#6fb36a"/>
+            <path d="M300 60 q40 -10 50 30 q-40 10 -50 -30z" fill="#2e7d32"/>
+            <path d="M60 80 q-10 -40 30 -45 q10 40 -30 45z" fill="#2e7d32"/>
+            <path d="M95 240 h210 l-22 95 h-166z" fill="#c8a165"/>
+            <path d="M95 240 h210" stroke="#8d6b37" stroke-width="8" stroke-linecap="round"/>
+            <path d="M110 265 h180 M115 290 h170 M120 315 h160" stroke="#a8844c" stroke-width="5"/>
+            <circle cx="135" cy="225" r="26" fill="#e53935"/>
+            <path d="M135 199 q5 -12 15 -14" stroke="#2e7d32" stroke-width="4" fill="none"/>
+            <circle cx="190" cy="215" r="30" fill="#f9c74f"/>
+            <ellipse cx="250" cy="222" rx="34" ry="24" fill="#7cb342"/>
+            <path d="M285 230 q20 -50 5 -80" stroke="#f57c00" stroke-width="16" stroke-linecap="round" fill="none"/>
+            <path d="M290 150 q-10 -15 5 -25 M292 152 q12 -12 22 0" stroke="#2e7d32" stroke-width="4" fill="none"/>
+          </svg>
+        </figure>
+      </div>
+
+      <div class="container stats-grid">
+        <article class="stat-card reveal">
+          <span class="stat-icon" aria-hidden="true">🌍</span>
+          <p class="stat-number" data-count="1.05" data-decimals="2" data-suffix=" bi t">0</p>
+          <p class="stat-label">de alimentos desperdiçados no mundo em 2022 <cite>(PNUMA, 2024)</cite></p>
+        </article>
+        <article class="stat-card reveal">
+          <span class="stat-icon" aria-hidden="true">🍽️</span>
+          <p class="stat-number" data-count="19" data-suffix="%">0</p>
+          <p class="stat-label">da comida disponível aos consumidores vai para o lixo <cite>(PNUMA, 2024)</cite></p>
+        </article>
+        <article class="stat-card reveal">
+          <span class="stat-icon" aria-hidden="true">🇧🇷</span>
+          <p class="stat-number" data-count="41.6" data-decimals="1" data-suffix=" kg">0</p>
+          <p class="stat-label">desperdiçados por pessoa, por ano, nos lares brasileiros <cite>(Embrapa/FGV, 2018)</cite></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="problema" class="section" aria-labelledby="titulo-problema">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">Seção 2</span>
+          <h2 id="titulo-problema">Conheça o problema</h2>
+          <p>Entenda o que é o desperdício de alimentos, por que ele acontece e quais são os seus impactos.</p>
+        </header>
+
+        <div class="two-col reveal">
+          <article class="card">
+            <h3>🥕 O que é desperdício de alimentos?</h3>
+            <p>
+              É quando um alimento <strong>próprio para consumo</strong> é descartado ou deixa de ser aproveitado,
+              principalmente nas etapas de <strong>varejo</strong> (supermercados, feiras) e <strong>consumo</strong>
+              (casas, restaurantes, escolas).
+            </p>
+            <p>
+              Ele é diferente da <strong>perda de alimentos</strong>, que acontece antes de o produto chegar à loja:
+              na colheita, no armazenamento e no transporte. Segundo a FAO, cerca de <strong>13%</strong> dos alimentos
+              se perdem entre a colheita e o varejo.
+            </p>
+          </article>
+          <figure class="card card-figure">
+            <svg viewBox="0 0 300 200" role="img" aria-labelledby="svgCadeiaTitle" class="chain-svg">
+              <title id="svgCadeiaTitle">Cadeia do alimento: campo, transporte, mercado, casa e lixo, mostrando onde ocorrem perdas e desperdício</title>
+              <g font-size="30" text-anchor="middle">
+                <text x="35" y="80">🌾</text><text x="95" y="80">🚚</text><text x="155" y="80">🏪</text><text x="215" y="80">🏠</text><text x="270" y="80">🗑️</text>
+              </g>
+              <path d="M55 70 h18 M115 70 h18 M175 70 h18 M235 70 h14" stroke="#1b5e20" stroke-width="3" marker-end="url(#seta)"/>
+              <defs><marker id="seta" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#1b5e20"/></marker></defs>
+              <rect x="10" y="110" width="120" height="34" rx="8" fill="#fff4cc"/>
+              <text x="70" y="132" font-size="13" text-anchor="middle" fill="#3e2f00">PERDA (≈13%)</text>
+              <rect x="140" y="110" width="150" height="34" rx="8" fill="#ffd8cc"/>
+              <text x="215" y="132" font-size="13" text-anchor="middle" fill="#5a1800">DESPERDÍCIO (≈19%)</text>
+              <text x="150" y="180" font-size="11" text-anchor="middle" fill="#33402f">Fontes: FAO e PNUMA (ONU)</text>
+            </svg>
+            <figcaption>Onde o alimento se perde ao longo do caminho até a mesa.</figcaption>
+          </figure>
+        </div>
+
+        <h3 class="sub-title reveal">Principais causas</h3>
+        <div class="cards-grid" id="causasGrid">
+        </div>
+
+        <h3 class="sub-title reveal">Consequências</h3>
+        <div class="tabs reveal">
+          <div class="tab-list" role="tablist" aria-label="Tipos de consequência">
+            <button role="tab" id="tab-amb" aria-controls="painel-amb" aria-selected="true" class="tab">🌿 Ambientais</button>
+            <button role="tab" id="tab-soc" aria-controls="painel-soc" aria-selected="false" class="tab" tabindex="-1">🤝 Sociais</button>
+            <button role="tab" id="tab-eco" aria-controls="painel-eco" aria-selected="false" class="tab" tabindex="-1">💰 Econômicas</button>
+          </div>
+          <div role="tabpanel" id="painel-amb" aria-labelledby="tab-amb" class="tab-panel" tabindex="0">
+            <ul class="check-list">
+              <li>A perda e o desperdício de alimentos geram entre <strong>8% e 10%</strong> das emissões globais de gases de efeito estufa (FAO/PNUMA).</li>
+              <li>Desperdiça-se também a <strong>água, o solo, a energia</strong> e o trabalho usados para produzir, transportar e preparar o alimento.</li>
+              <li>Restos orgânicos em aterros e lixões se decompõem e liberam <strong>metano</strong>, um gás que agrava o aquecimento global.</li>
+            </ul>
+          </div>
+          <div role="tabpanel" id="painel-soc" aria-labelledby="tab-soc" class="tab-panel" tabindex="0" hidden>
+            <ul class="check-list">
+              <li>Enquanto toneladas de comida vão para o lixo, cerca de <strong>783 milhões</strong> de pessoas passam fome no mundo (ONU, 2024).</li>
+              <li>O desperdício nas casas equivale a mais de <strong>1 bilhão de refeições por dia</strong> no mundo (PNUMA, 2024).</li>
+              <li>Alimentos em bom estado poderiam ser <strong>doados</strong> — no Brasil, a Lei nº 14.016/2020 autoriza a doação de excedentes por estabelecimentos.</li>
+            </ul>
+          </div>
+          <div role="tabpanel" id="painel-eco" aria-labelledby="tab-eco" class="tab-panel" tabindex="0" hidden>
+            <ul class="check-list">
+              <li>Comida jogada fora é <strong>dinheiro jogado fora</strong>: pesa no orçamento das famílias, escolas e empresas.</li>
+              <li>Segundo a Embrapa/FGV (2018), uma família brasileira desperdiça em média <strong>128,8 kg</strong> de alimentos por ano.</li>
+              <li>Restaurantes e supermercados têm prejuízo com estoque vencido, excesso de preparo e custos de descarte.</li>
+            </ul>
+          </div>
+        </div>
+
+        <article class="card local-card reveal" aria-labelledby="titulo-natal">
+          <div class="local-icon" aria-hidden="true">📍</div>
+          <div>
+            <h3 id="titulo-natal">E em Natal/RN?</h3>
+            <p>
+              <strong>Não encontramos um levantamento público e consolidado</strong> que meça especificamente quanto alimento
+              é desperdiçado em Natal. Por isso, este projeto <strong>não apresenta números inventados</strong> para a cidade
+              e usa como referência os dados nacionais (Embrapa/FGV) e mundiais (ONU).
+            </p>
+            <p>Mesmo sem um número local, o problema aparece no dia a dia da cidade:</p>
+            <ul class="check-list">
+              <li><strong>Escolas:</strong> sobras nos pratos da merenda e porções maiores que a fome.</li>
+              <li><strong>Residências:</strong> compras sem lista, frutas e verduras que estragam na geladeira.</li>
+              <li><strong>Restaurantes:</strong> excesso de preparo e sobras de buffet.</li>
+              <li><strong>Supermercados e feiras:</strong> produtos “feios” ou perto da validade descartados.</li>
+            </ul>
+            <p class="note">
+              💡 O relatório do PNUMA (2024) aponta que <strong>países mais quentes tendem a ter mais desperdício doméstico</strong>,
+              em parte pela dificuldade de conservar alimentos frescos — um alerta importante para cidades de clima quente como Natal.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ods12" class="section section-alt" aria-labelledby="titulo-ods">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">Seção 3</span>
+          <h2 id="titulo-ods">Conheça o ODS 12</h2>
+          <p>Consumo e Produção Responsáveis — um dos 17 Objetivos de Desenvolvimento Sustentável da ONU.</p>
+        </header>
+
+        <div class="two-col reveal">
+          <article class="card ods-card">
+            <div class="ods-badge" aria-hidden="true">
+              <span>12</span>
+              <svg viewBox="0 0 60 30" width="60" height="30"><path d="M10 15 q10 -12 20 0 t20 0 q-10 12 -20 0 t-20 0z" fill="none" stroke="#fff" stroke-width="4"/></svg>
+            </div>
+            <h3>O que significa?</h3>
+            <p>
+              O <strong>ODS 12</strong> busca <strong>assegurar padrões de produção e de consumo sustentáveis</strong>.
+              Ou seja: produzir e consumir de forma a usar melhor os recursos naturais, gerar menos resíduos e não
+              comprometer as próximas gerações.
+            </p>
+            <h3>Por que é importante?</h3>
+            <p>
+              Os recursos do planeta são limitados. Quando um alimento é desperdiçado, todos os recursos usados para
+              produzi-lo também são perdidos. Consumir com responsabilidade protege o meio ambiente, a economia e as pessoas.
+            </p>
+          </article>
+
+          <article class="card meta-card">
+            <span class="meta-label">🎯 Meta em destaque</span>
+            <h3 class="meta-title">Meta 12.3</h3>
+            <p class="meta-text">
+              “Até 2030, <strong>reduzir pela metade o desperdício de alimentos per capita mundial</strong>, nos níveis de
+              varejo e do consumidor, e <strong>reduzir as perdas de alimentos</strong> ao longo das cadeias de produção e
+              abastecimento, incluindo as perdas pós-colheita.”
+            </p>
+            <div class="meta-visual" aria-label="Representação: reduzir o desperdício pela metade até 2030">
+              <div class="meta-bar"><span>Hoje</span><div class="meta-fill full"></div></div>
+              <div class="meta-bar"><span>2030</span><div class="meta-fill half"></div></div>
+            </div>
+            <p class="small">O PNUMA e a FAO são as agências da ONU responsáveis por acompanhar essa meta.</p>
+          </article>
+        </div>
+
+        <h3 class="sub-title reveal">Como pequenas atitudes ajudam?</h3>
+        <ol class="steps reveal">
+          <li><span class="step-icon" aria-hidden="true">📝</span><strong>Planejo</strong> o que vou comprar e cozinhar.</li>
+          <li><span class="step-icon" aria-hidden="true">🛒</span><strong>Compro</strong> só o necessário.</li>
+          <li><span class="step-icon" aria-hidden="true">🥗</span><strong>Aproveito</strong> o alimento por inteiro e as sobras.</li>
+          <li><span class="step-icon" aria-hidden="true">📉</span><strong>Desperdício cai</strong> na minha casa.</li>
+          <li><span class="step-icon" aria-hidden="true">🌎</span><strong>Somando</strong> milhões de casas, a meta 12.3 fica mais perto.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="calculadora" class="section" aria-labelledby="titulo-calc">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">Seção 4</span>
+          <h2 id="titulo-calc">Calculadora de desperdício</h2>
+          <p>Descubra quanto alimento sua casa pode estar desperdiçando ao longo do mês e do ano.</p>
+        </header>
+
+        <div class="calc-grid reveal">
+          <form id="calcForm" class="card form-card" novalidate>
+            <div class="form-group">
+              <label for="kgSemana">Alimentos desperdiçados por semana (kg)</label>
+              <input type="text" id="kgSemana" name="kgSemana"
+                     inputmode="decimal" autocomplete="off" placeholder="Ex.: 2,5" aria-describedby="kgAjuda kgSemanaErro" required>
+              <small id="kgAjuda" class="hint">Some restos de comida, alimentos estragados e sobras descartadas. Use ponto ou vírgula.</small>
+              <p id="kgSemanaErro" class="error-msg" role="alert" aria-live="assertive"></p>
+            </div>
+            <div class="form-group">
+              <label for="pessoas">Número de pessoas na residência</label>
+              <input type="number" id="pessoas" name="pessoas" min="1" max="30" step="1"
+                     inputmode="numeric" placeholder="Ex.: 4" aria-describedby="pessoasErro" required>
+              <p id="pessoasErro" class="error-msg" role="alert" aria-live="assertive"></p>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Calcular</button>
+              <button type="reset" class="btn btn-outline" id="calcReset">Limpar</button>
+            </div>
+            <p class="small">ℹ️ Mês considerado como 52 semanas ÷ 12 ≈ 4,33 semanas.</p>
+          </form>
+
+          <div id="calcResult" class="card result-card" aria-live="polite">
+            <div class="result-empty">
+              <span aria-hidden="true">⚖️</span>
+              <p>Preencha o formulário para ver seus resultados aqui.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section section-alt" aria-labelledby="titulo-quiz">
+      <div class="container narrow">
+        <header class="section-header reveal">
+          <span class="section-tag">Seção 5</span>
+          <h2 id="titulo-quiz">Quiz interativo</h2>
+          <p>Teste seus conhecimentos sobre desperdício de alimentos e consumo consciente.</p>
+        </header>
+
+        <div class="card quiz-card reveal" id="quizBox">
+        </div>
+      </div>
+    </section>
+
+    <section id="dicas" class="section" aria-labelledby="titulo-dicas">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">Seção 6</span>
+          <h2 id="titulo-dicas">Dicas para reduzir o desperdício</h2>
+          <p>Atitudes simples que fazem diferença na sua casa, na escola e no trabalho. Clique em um card para ver mais.</p>
+        </header>
+        <div class="tips-grid" id="dicasGrid">
+        </div>
+      </div>
+    </section>
+
+    <section id="desafio" class="section section-alt" aria-labelledby="titulo-desafio">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">Seção 7</span>
+          <h2 id="titulo-desafio">Desafio Desperdício Zero – 7 dias</h2>
+          <p>Marque as atitudes que você realizou a cada dia. Seu progresso fica salvo neste navegador.</p>
+        </header>
+
+        <div class="card progress-card reveal">
+          <div class="progress-info">
+            <p><strong id="progressoTexto">0 de 0 atitudes</strong> concluídas</p>
+            <p id="progressoNivel" class="level">Nível: 🌱 Semente</p>
+          </div>
+          <div class="progress" role="progressbar" aria-labelledby="progressoTexto" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <button type="button" class="btn btn-outline btn-sm" id="resetDesafio">Recomeçar desafio</button>
+        </div>
+
+        <div class="days-grid" id="diasGrid">
+        </div>
+
+        <div id="conquista" class="card achievement" hidden tabindex="-1">
+          <span aria-hidden="true">🏆</span>
+          <h3>Parabéns! Você completou o Desafio Desperdício Zero!</h3>
+          <p>Você provou que pequenas atitudes geram grandes mudanças. Agora, convide alguém para fazer o desafio também!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="logo footer-logo"><span aria-hidden="true">🌱</span> Desperdício <strong>Zero</strong></p>
+        <p>Projeto acadêmico sobre o ODS 12 – Consumo e Produção Responsáveis. Natal/RN.</p>
+      </div>
+      <div>
+        <h2 class="footer-title">Fontes</h2>
+        <ul class="sources">
+          <li>PNUMA (UNEP). <em>Food Waste Index Report 2024</em>.</li>
+          <li>FAO. <em>The State of Food and Agriculture 2019</em>.</li>
+          <li>Embrapa/FGV. Pesquisa sobre desperdício de alimentos nas famílias brasileiras (2018).</li>
+          <li>ONU Brasil. Objetivos de Desenvolvimento Sustentável – ODS 12.</li>
+          <li>Brasil. Lei nº 14.016, de 23 de junho de 2020.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">Feito com HTML, CSS e JavaScript puro. <a href="#inicio">Voltar ao topo ↑</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
